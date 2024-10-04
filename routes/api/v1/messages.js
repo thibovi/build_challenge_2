@@ -76,4 +76,17 @@ router.put("/:id", (req, res, next) => {
 }
 );
 
+
+//DELETE: /api/v1/messages/:id
+//verwijder één specifiek bericht uit je array (gebruik array key 0, 1, ... of fake dit)
+//geef een correct antwoord terug net zoals we dat hierboven gedaan hebben (status, message)
+//je response bevat status en message
+
+router.delete("/:id", (req, res, next) => {
+    res.status(200).json({
+        status: "success",
+        message: "DELETE message"
+    });
+}
+);
 module.exports = router;
