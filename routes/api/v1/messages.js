@@ -85,7 +85,11 @@ router.put("/:id", (req, res, next) => {
 router.delete("/:id", (req, res, next) => {
     res.status(200).json({
         status: "success",
-        _id: req.params.id,
+        data: {
+            message: {
+                _id: req.params.id,
+            }
+        },
         message: "DELETE message"
     });
 }
