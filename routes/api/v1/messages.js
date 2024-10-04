@@ -9,14 +9,14 @@ router.get("/", (req, res, next) => {
         data: {
             "messages": [
                 {
-                    "id": 1,
-                    "user": "user1",
-                    "message": "message1"
+                    id: 1,
+                    user: "user1",
+                    message: "message1"
                 },
                 {
-                    "id": 2,
-                    "user": "user2",
-                    "message": "message2"
+                    id: 2,
+                    user: "user2",
+                    message: "message2"
                 }
             ]
         }
