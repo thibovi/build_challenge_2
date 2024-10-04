@@ -89,4 +89,25 @@ router.delete("/:id", (req, res, next) => {
     });
 }
 );
+
+//GET: /api/v1/messages?user=username
+//tip: req.params.username
+//geef berichten terug voor één specifieke user
+//je response bevat status en message maar ook .data.messages[]
+
+router.get("/:user", (req, res, next) => {
+    res.status(200).json({
+        status: "success",
+        message: "GET message",
+        data: {
+            "messages": [
+                {
+                    id: 1,
+
+                }
+            ]
+        }
+    });
+}
+);
 module.exports = router;
