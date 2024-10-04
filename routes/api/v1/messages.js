@@ -58,4 +58,22 @@ router.post("/", (req, res, next) => {
     });
 }
 );
+
+//PUT: /api/v1/messages/:id
+//hiermee kan je een specifiek bericht updaten (vb: text aanpassen)
+//je response bevat status en message maar ook .data.message met daarin je nieuw bericht
+
+router.put("/:id", (req, res, next) => {
+    res.status(200).json({
+        status: "success",
+        message: "PUT message",
+        data: {
+            "message": {
+                id: 1,
+            }
+        }
+    });
+}
+);
+
 module.exports = router;
