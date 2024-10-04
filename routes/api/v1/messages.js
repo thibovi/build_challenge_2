@@ -39,4 +39,23 @@ router.get("/:id", (req, res, next) => {
 }
 );
 
+//POST: /api/v1/messages
+//deze route voegt één nieuw bericht toe aan je array
+//Body: { message: { “user”: “Pikachu”, “text”: “nodejs isn’t hard, or is it?” } }
+//zorg dat je de naam en text zelf kan invullen via postman
+//je response bevat status en message maar ook .data.message met daarin je nieuw bericht
+
+router.post("/", (req, res, next) => {
+    res.status(200).json({ 
+        status: "success",
+        message:  "POST message",
+        data: {
+            "message": {
+                id: 1,
+                
+            }
+        }
+    });
+}
+);
 module.exports = router;
